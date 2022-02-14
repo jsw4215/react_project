@@ -11,33 +11,34 @@ const SingleBox = (props) => {
     const params = useParams();
     const idx = params.index;
     const word_list = props.list_data;
+    const text = React.useRef(null)
+
+    const [status, setStatus] = React.useState("read")
+
 
     const deleteWordInChild = () => {
         props.deleteWordFunc(idx)
         history.goBack()
     }
 
-    const updateWordInChild = (word) => {
-        props.updateWordFunc(word)
-        history.goBack()
+    const goUpdate = () => {
+        if (!isEditing){
+        setStatus("edit")
+        }else{
+            props.updateWordFunc(text.current.value, idx)
+            history.goBack()
+        }
     }
 
-    const goUpdate = () => {
-        history.push("/detail/update/"+idx)
-    }
+    let isEditing = status==="edit"
+
+    console.log("isEditing : ",isEditing, status)
+
 
     return (
-        <BrowserRouter>
             <div>
-
-                <Switch>
-                    <Route path="/detail/:idx" exact>
-                        <ReadSingle index={idx} list_data={word_list} />
-                    </Route>
-                    <Route path="/detail/update/:idx">
-                        <UpdateSingle index={idx} list_data={word_list} updateWordInChild={updateWordInChild} />
-                    </Route>
-                </Switch>
+                {!isEditing&&<h1>{word_list[idx] ? word_list[idx].text : ""}</h1>}
+                {isEditing&&<input type="text" ref={text} placeholder={word_list[idx].text} />}
 
                 <Button
                     variant="outlined"
@@ -46,6 +47,7 @@ const SingleBox = (props) => {
                 >
                     수정하기
                 </Button>
+                {!isEditing&&
                 <Button
                     variant="outlined"
                     color="secondary"
@@ -53,9 +55,8 @@ const SingleBox = (props) => {
                 >
                     삭제하기
                 </Button>
-
+                }
             </div>
-        </BrowserRouter>
     );
 };
 

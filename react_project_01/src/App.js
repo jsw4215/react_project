@@ -6,6 +6,7 @@ import SingleBox from './singleBox/SingleBox'
 import styled from "styled-components";
 import AddWord from "./AddWord"
 import { useState } from 'react';
+import { SettingsInputAntennaTwoTone } from '@material-ui/icons';
 
 function App() {
   const history = useHistory();
@@ -32,8 +33,18 @@ function App() {
     set_my_lists(temp_list);
   }
 
-  const updateWordFunc = (update_word) => {
-    
+  const updateWordFunc = (update_word, idx) => {
+    // const temp = my_lists.filter((lst, index) => {
+    //   if (index == idx){
+    //     lst[index] = update_word
+    //   }
+    //   return lst
+    // })
+
+    const temp = my_lists
+    temp[idx] = {text: update_word, completed: false}
+    console.log("update : ",temp, update_word)
+    set_my_lists(temp)
   }
 
   const addWord = () => {
@@ -49,7 +60,7 @@ function App() {
             <button onClick={addWord}>추가하기</button>
           </Route>
           <Route path="/detail/:index">
-            <SingleBox list_data={my_lists} deleteWordFunc={deleteWordFunc} />
+            <SingleBox list_data={my_lists} deleteWordFunc={deleteWordFunc} updateWordFunc={updateWordFunc}/>
           </Route>
           <Route path="/addWord">
             <AddWord addWordFunc={addWordFunc}></AddWord>
