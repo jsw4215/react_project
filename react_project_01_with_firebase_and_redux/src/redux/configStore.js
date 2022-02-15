@@ -1,5 +1,5 @@
 //configStore.js
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import word from "./modules/word";
 import thunk from "redux-thunk";
 import { createBrowserHistory } from "history";

@@ -22,8 +22,8 @@ const SingleBox = (props) => {
         history.goBack()
     }
 
-    const updateWordInChild = (word_obj, idx) => {
-        dispatch(updateWordFB(word_obj, idx))
+    const updateWordInChild = (word_obj) => {
+        dispatch(updateWordFB(word_obj))
         history.goBack()
     }
 
@@ -38,23 +38,24 @@ const SingleBox = (props) => {
 
     return (
         <div>
-            {!isEditing && <ReadSingle index={idx} list_data={word_list} />}
-            {isEditing && <UpdateSingle index={idx} list_data={word_list} updateWordInChild={updateWordInChild} />}
-
-            <Button
+            {!isEditing && <><ReadSingle index={idx} list_data={word_list} /><Button
                 variant="outlined"
                 color="primary"
                 onClick={goUpdate}
             >
                 수정하기
-            </Button>
-            <Button
+            </Button><Button
                 variant="outlined"
                 color="secondary"
                 onClick={deleteWordInChild}
             >
-                삭제하기
-            </Button>
+                    삭제하기
+                </Button></>
+            
+            }
+            {isEditing && <UpdateSingle index={idx} list_data={word_list} updateWordInChild={updateWordInChild} />}
+
+            
 
         </div>
     );

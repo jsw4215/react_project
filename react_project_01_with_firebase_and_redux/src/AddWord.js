@@ -6,11 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 
 const AddWord = (props) => {
     const text = React.useRef(null);
+    const explain = React.useRef(null);
+    const example = React.useRef(null);
     const history = useHistory();
     const dispatch = useDispatch();
 
     const addWordFuncInChild = () => {
-        const temp = {text : text.current.value, completed : false}
+        const temp = { text: text.current.value, explain: explain.current.value, example: example.current.value , completed: false }
 
         dispatch(addWordFB(temp))
         history.goBack();
@@ -19,10 +21,18 @@ const AddWord = (props) => {
 
     return (
         <div>
-            <input type="text" ref={text} />
+            <div>
+               단어 <input type="text" ref={text} />
+            </div>
+            <div>
+               설명 <input type="text" ref={explain} />
+            </div>
+            <div>
+               예시 <input type="text" ref={example} />
+            </div>
             <button onClick={addWordFuncInChild}>추가하기</button>
         </div>
     );
-  };
+};
 
-  export default AddWord;
+export default AddWord;
