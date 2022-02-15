@@ -34,7 +34,6 @@ const SingleBox = (props) => {
 
     console.log("isEditing : ",isEditing, status)
 
-
     return (
             <div>
                 {!isEditing&&<h1>{word_list[idx] ? word_list[idx].text : ""}</h1>}
