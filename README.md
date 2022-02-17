@@ -114,7 +114,7 @@ src/
 
 <table width="100%">
     <tr>
-        <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292881-26320151-a136-43a1-8a36-763a5ab88b25.JPG" /></td>
+        <td width="50%"></td>
         <td width="50%">
             <h5>회원가입</h5>
             <ul>
@@ -134,7 +134,7 @@ src/
 
 <table width="100%">
     <tr>
-        <td width="50%"><img src="" /></td>
+        <td width="50%"></td>
         <td width="50%">
             <h5>메인 화면</h5>
             <ul>
@@ -153,7 +153,7 @@ src/
 <h4><b>📰 SingleBox Page 📰</b></h4>
 <table width="100%">
     <tr>
-        <td width="50%"><img src="" /></td>
+        <td width="50%"></td>
         <td width="50%">
             <h5>상세 화면</h5>
             <ul>
