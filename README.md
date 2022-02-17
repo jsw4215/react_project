@@ -116,6 +116,7 @@ src/
 
 <br>
 <h4><b>📰 SingleBox Page 📰</b></h4>
+
 <table width="100%">
     <tr>
         <td width="50%">
