@@ -171,7 +171,7 @@ src/
 
 <br><br>
 
-<h3 align="center"><b>🏷 API Table 🏷</b></h3>
+<h3 align="center"><b>🏷 Firebase  🏷</b></h3>
 
 #### Word
 
