@@ -29,7 +29,7 @@
 <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=firebase&logoColor=white">
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft7kml%2Fbtrh5ZYODMJ%2FCQ9gcLekjvYb8O0lXnfTwK%2Fimg.png">
+<img src="https://img.shields.io/badge/react-E34F26?style=for-the-badge&logo=react&logoColor=white">
 </br>
 
 <br><br>
