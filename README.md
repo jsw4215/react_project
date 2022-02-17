@@ -35,17 +35,19 @@
 <img src="https://img.shields.io/badge/firebase-FFCC33?style=for-the-badge&logo=firebase&logoColor=white">
 <img src="https://img.shields.io/badge/typescript-945DD6?style=for-the-badge&logo=typescript&logoColor=white">
 </br>
+<img src="https://img.shields.io/badge/reactrouterdom-375BD2?style=for-the-badge&logo=reactrouterdom&logoColor=white">
+<img src="https://img.shields.io/badge/styledcomponents-181717?style=for-the-badge&logo=styledcomponents&logoColor=white">
+
 
 <br><br>
 <h3 align="center"><b>🎬 Getting Started 🎬</b></h3>
 <pre>
 <code>
-~$ cd Team13-NetflixComment
-~$ sudo chmod 755 initail_ec2.sh
-~$ ./initial_ec2.sh
-~$ pip install flask
-~$ pip install mongo
-~$ python3 app.py
+~$ cd react_project_01_with_firebase_and_redux
+~$ yarn add react-router-dom
+~$ yarn add react-redux
+~$ yarn add styled-components
+~$ yarn start
 </code>
 </pre>
 
@@ -53,19 +55,29 @@
 <h3 align="center"><b>📂 Project Directory Structure 📁</b></h3>
 <pre>
 <code>
-/static
-     ├── /bookmark.svg
-     ├── /detail.css
-     ├── /home.css
-     ├── /login.css
-     ├── /Netflix-logo.png
-/templates
-     ├── /detail.html
-     ├── /home.html
-     └── /login.html
-├── /detail.py
-├── /app.py
-└── /home.py
+src/
+┣ addWord/
+┃ ┗ AddWord.js
+┣ redux/
+┃ ┣ modules/
+┃ ┃ ┗ word.js
+┃ ┗ configStore.js
+┣ singleBox/
+┃ ┣ readSingle/
+┃ ┃ ┣ ReadSingle.js
+┃ ┃ ┗ ReadSingle.jsx
+┃ ┣ SingleBox.js
+┃ ┗ UpdateSingle.js
+┣ App.css
+┣ App.js
+┣ App.test.js
+┣ firebase.js
+┣ index.css
+┣ index.js
+┣ logo.svg
+┣ reportWebVitals.js
+┣ setupTests.js
+┗ WordBoxList.js
 </code>
 </pre>
 <br>
@@ -78,13 +90,13 @@
 <br>
 <h3 align="center"><b>📢 Main function 📢</b></h3>
 <br>
-<h4><b>📰 Login Page 📰</b></h4>
+<h4><b>📰 Index Page 📰</b></h4>
 
 <table width="100%">
     <tr>
         <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292868-4c797683-a57a-4b94-85ee-b133db765f8f.JPG" /></td>
         <td width="50%">
-            <h5>로그인</h5>
+            <h5></h5>
             <ul>
                 <li>JWT 방식으로 구현</li>
                 <li>회원가입 버튼 클릭 시 회원가입 UI로 변경</li>
