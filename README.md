@@ -30,6 +30,8 @@
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=firebase&logoColor=white">
 <img src="https://img.shields.io/badge/react-E34F26?style=for-the-badge&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/redux-E34F26?style=for-the-badge&logo=redux&logoColor=white">
+<img src="https://img.shields.io/badge/firebase-E34F26?style=for-the-badge&logo=firebase&logoColor=white">
 </br>
 
 <br><br>
