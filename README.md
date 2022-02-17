@@ -138,9 +138,9 @@ src/
         <td width="50%">
             <h5>메인 화면</h5>
             <ul>
-                <li>넷플릭스의 영화 및 드라마 크롤링 하여 Jinja를 이용한 서버 사이드 렌더링으로 구현</li>
-                <li>북마크 클릭 시 해당 컨텐츠 하단에 북마크 영역에 표시</li>
-                <li>컨텐츠 클릭 시 영화 상세 및 리뷰 페이지로 이동</li>
+                <li>리덕스를 이용하여 Firebase FireStore에 저장된 값 로드하기</li>
+                <li>리액트 라우터 돔을 이용하여 각 페이지 라우팅</li>
+                <li>스타일드 컴포넌트를 이용한 디자인구현</li>
             </ul>
         </td>
     </tr>
@@ -150,27 +150,16 @@ src/
 ---
 
 <br>
-<h4><b>📰 Movie Detail & Reviw Page 📰</b></h4>
+<h4><b>📰 SingleBox Page 📰</b></h4>
 <table width="100%">
     <tr>
         <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292894-501485ee-5450-45c9-8c5c-1c59c99f81fd.JPG" /></td>
         <td width="50%">
-            <h5>영화 상세 화면</h5>
+            <h5>상세 화면</h5>
             <ul>
-                <li>넷플릭스의 영화 및 드라마 상세정보를 크롤링 하여 Jinja를 이용한 서버 사이드 렌더링으로 구현 </li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292893-043d607a-4434-4443-a91c-280c120d3338.JPG" /></td>
-        <td width="50%">
-            <h5>글쓰기 화면</h5>
-            <ul>
-                <li>글 작성 후의 모습</li>
-                <li>조회 버튼 클릭 시, DB에 저장된 리뷰 Jinja를 통한 서버 사이드 렌더링 구현</li>
-                <li>저장 버튼 클릭 시, DB에 해당 리뷰 저장</li>
-                <li>저장 조건 - 모든 입력란을 기입하여야 함</li>
-                <li>댓글 수정, 삭제 기능 - 본인이 작성한 댓글만 수정, 삭제 가능</li>
+                <li>조건문과 state를 이용한 글 삭제/수정 분기 구현</li>
+                <li>styled-components와 데이터 처리부 분리 구현</li>
+                <li>리덕스 툴킷 적용한 데이터 생성/읽기/삭제/수정 구현</li>
             </ul>
         </td>
     </tr>
@@ -184,39 +173,14 @@ src/
 
 <h3 align="center"><b>🏷 API Table 🏷</b></h3>
 
-#### User
-|기능|Method|URL|request|response|
-|:--:|:--:|:--:|:--:|:--:|
-|로그인|POST|/login| id,pw  |    |
-|회원가입|POST|/register|  id,pw  |  가입 완료 메세지  |
-|로그아웃|GET|/logout|    |    |
-|즐겨찾기 추가|POST|/api/addfavorite|movie_title|추가된 영화제목|
-|즐겨찾기 삭제|POST|/api/delfavorite|movie_title|삭제된 영화제목|
+#### Word
 
-#### Movie
-
-|기능|Method|URL|request|response|
-|:--:|:--:|:--:|:--:|:--:|
-|컨텐츠 전체 조회|GET|/movies||전체 컨텐츠 리스트|
-|특정 컨텐츠 상세 조회|GET|/detail/:category/:movie_name||특정 컨텐츠|
-|즐겨찾기 확인|GET|/check_bookmark||
-
-
-#### Review
-
- 기능  |      Method     | URL |  request   |        response       |
-| :-: | :----------: | :----: | :-------------: | :--------------: |
-|  리뷰 리스트  | GET  |  /review   |                 |   "리뷰 조회"     |
-|  리뷰 작성  |  POST |  /review  |review, star, movieTitle | "리뷰 등록 완료"  |
-|  리뷰 수정  |  PUT |  /review|  id, date, review   |  "수정 완료"     |
-|  리뷰 삭제  | DELETE  |  /review |  userid, review, starValue, writeTime   |  "삭제 완료"    |
-| 모든 리뷰 리스트 | GET | /allReview |  | review list |
-
-#### Movie Crawling (❗️최초 1회만 실행)
-
-기능  |      Method     | URL |  request   |        response       |
-| :-: | :----------: | :----: | :-------------: | :--------------: |
-|  영화 크롤링  | GET  |  /save_movies   |                 |   성공     |
+|Actions|Params - to|Params - from|Role|
+|:--:|:--:|:--:|:--:|
+|word/CREATE| {text, explain, example} |{id}|생성|
+|word/LOAD| - | list[...{text, explain, example}] |읽기|
+|word/UPDATE|{id, text, explain, example}| - |수정|
+|word/DELETE|{id}| - |삭제|
 
 
 <br><br>
