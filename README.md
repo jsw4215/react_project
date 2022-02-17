@@ -94,7 +94,7 @@ src/
 
 <table width="100%">
     <tr>
-        <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292868-4c797683-a57a-4b94-85ee-b133db765f8f.JPG" /></td>
+        <td width="50%"><img src="" /></td>
         <td width="50%">
             <h5></h5>
             <ul>
@@ -134,7 +134,7 @@ src/
 
 <table width="100%">
     <tr>
-        <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292898-a0ac378e-1fb9-4ec1-988b-2602b6c6a39f.JPG" /></td>
+        <td width="50%"><img src="" /></td>
         <td width="50%">
             <h5>메인 화면</h5>
             <ul>
@@ -153,7 +153,7 @@ src/
 <h4><b>📰 SingleBox Page 📰</b></h4>
 <table width="100%">
     <tr>
-        <td width="50%"><img src="https://user-images.githubusercontent.com/48196352/149292894-501485ee-5450-45c9-8c5c-1c59c99f81fd.JPG" /></td>
+        <td width="50%"><img src="" /></td>
         <td width="50%">
             <h5>상세 화면</h5>
             <ul>
