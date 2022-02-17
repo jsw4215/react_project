@@ -90,51 +90,16 @@ src/
 <br>
 <h3 align="center"><b>📢 Main function 📢</b></h3>
 <br>
-<h4><b>📰 Index Page 📰</b></h4>
-
-<table width="100%">
-    <tr>
-        <td width="50%"><img src="" /></td>
-        <td width="50%">
-            <h5></h5>
-            <ul>
-                <li>JWT 방식으로 구현</li>
-                <li>회원가입 버튼 클릭 시 회원가입 UI로 변경</li>
-            </ul>
-        </td>
-    </tr>
-</table>
 
 
 ---
 
 
 <br>
-<h4><b>📰 Join Membership Page 📰</b></h4>
+<h4><b>📰 Main Page 📰</b></h4>
 
 <table width="100%">
     <tr>
-        <td width="50%"></td>
-        <td width="50%">
-            <h5>회원가입</h5>
-            <ul>
-                <li>아이디 중복확인 시 아이디 입력여부, 형식, 중복 아이디 체크</li>
-                <li>비밀번호 2번 입력으로 비밀번호 형식, 일치 여부 체크</li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-
----
-
-
-<br>
-<h4><b>📰 Movie Main Page 📰</b></h4>
-
-<table width="100%">
-    <tr>
-        <td width="50%"></td>
         <td width="50%">
             <h5>메인 화면</h5>
             <ul>
@@ -153,7 +118,6 @@ src/
 <h4><b>📰 SingleBox Page 📰</b></h4>
 <table width="100%">
     <tr>
-        <td width="50%"></td>
         <td width="50%">
             <h5>상세 화면</h5>
             <ul>
@@ -193,17 +157,13 @@ src/
 <br>
 <details>
     <summary>
-        <b>ajax로 데이터를 받아오고 화면으로 뿌려줄 때, 비동기로 작동하기 때문에 
-요소들이 생성되기전에 dom에 접근하게 되어 UI를 다루기가 쉽지 않았습니다. </b>
+        <b>리덕스 적용시 복잡한 구조 개선 필요성을 느꼈다.</b>
     </summary>
-    <br>해결 : 순차적으로 실행되 접근할 수 있게끔 ajax메서드 안에서 작성해서 해결했습니다.
+    <br>해결 : 리덕스 툴킷을 적용하여 Action Creator를 생략하고 Reducer에 통합적용으로 해결
 </details>
 <details>
     <summary>
-        <b>순환 참조(임포트) 문제
-개별 파이썬 파일 작업으로 blueprint를 사용하였는데
-ex) app.py <- detail.py
-이때 detail에서도 app.py를 임포트 할 경우 에러가 발생하였다. </b>
+        <b>타입 스크립트 적용시, userSelector의 인자 state의 타입 적용</b>
     </summary>
-    <br>해결 : 전역으로 임포트 하지 않고 함수내에서 임포트 하는 방법으로 해결
+    <br>해결 : combineReducers를 이용하여 rootReducer를 생성 후, 타입을 export하여 해결
 </details>
